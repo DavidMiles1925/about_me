@@ -1,0 +1,19 @@
+.header {
+  height: 100vh;
+  background-color: #eee;
+  background-image: url("../images/HeaderBackground.jpg");
+  background-size: cover;
+  background-position: cover;
+  text-align: center;
+}
+
+.header-title {
+  font-family: "Permanent Marker, cursive;";
+  font-size: 140px;
+  line-height: 140px;
+  color: white;
+  text-transform: uppercase;
+  max-width: 1240px;
+  margin: auto;
+  text-align: center;
+}

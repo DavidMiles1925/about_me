@@ -1,0 +1,11 @@
+.page {
+  background: #eeeeee;
+  display: block;
+  margin: 0 auto;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+}
