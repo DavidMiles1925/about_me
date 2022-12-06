@@ -1,3 +1,38 @@
+let aboutCards = [
+  {
+    title: "Outdoors",
+    src: "./images/Tents.jpg",
+    alt: "Oudoors",
+    text: `I love to spend time in the great outdoors! Whether it's camping,
+    hiking, canoeing, or just enjoying the scenery you can count me in!`,
+  },
+  {
+    title: "Family",
+    src: "./images/Family.jpg",
+    alt: "Family",
+    text: `Spending time with my family is one of my favorite things to do. My
+    wonderful wife is named Allison. We have a nine year old son named
+    Ben, and a four year old daughter named Amelia.`,
+  },
+  {
+    title: "Friends",
+    src: "./images/Friends.jpg",
+    alt: "Friends",
+    text: `I am lucky to have such wonderful friends in my life. I love to
+    surround myself with positive and supportive people. We are always up
+    for a stimulating challenge.`,
+  },
+  {
+    title: "Career",
+    src: "./images/Computer.jpg",
+    alt: "Career",
+    text: `A rewarding career in software engineering is something I look forward
+    to! I have been successful in my previous careers of retail management
+    and exercise instruction. I hope to bring the same passion with me to
+    software engineering!`,
+  },
+];
+
 let projectCards = [
   {
     title: "Library",
@@ -32,8 +67,37 @@ let projectCards = [
   },
 ];
 
+const aboutCardsDisplayed = document.querySelector(".content");
+const aboutCardTemplate = document.querySelector("#aboutCard").content;
+
 const projectCardsDisplayed = document.querySelector(".projects__container");
-const projectCardTemplate = document.querySelector("#card").content;
+const projectCardTemplate = document.querySelector("#projectCard").content;
+
+function getAboutElement(data) {
+  let aboutElement = aboutCardTemplate.querySelector(".card").cloneNode(true);
+
+  aboutElement.querySelector(".card-title").textContent = data["title"];
+  aboutElement.querySelector(".card-image").src = data["src"];
+  aboutElement.querySelector(".card-image").alt = data["alt"];
+  aboutElement.querySelector(".card-text").textContent = data["text"];
+
+  return aboutElement;
+}
+
+function appendAboutCards() {
+  for (card of aboutCards) {
+    let data = ["title", "src", "alt", "text"];
+
+    data["title"] = card.title;
+    data["src"] = card.src;
+    data["alt"] = card.alt;
+    data["text"] = card.text;
+
+    let newCard = getAboutElement(data);
+
+    aboutCardsDisplayed.append(newCard);
+  }
+}
 
 function getProjectElement(data) {
   let cardElement = projectCardTemplate.querySelector(".card").cloneNode(true);
@@ -63,4 +127,5 @@ function appendProjectCards() {
   }
 }
 
+appendAboutCards();
 appendProjectCards();
