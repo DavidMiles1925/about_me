@@ -65,6 +65,15 @@ let projectCards = [
     This was also my first opportunity to work with JavaScript. My script included
     variables, arrays, functions, loops, and event listeners. Click the link to visit the page.`,
   },
+  {
+    title: "GitHub",
+    link: "https://github.com/DavidMiles1925",
+    src: "./images/github.png",
+    alt: "GitHub",
+    text: `Check out my code repositories to see the magic happening behind the scenes. I use
+    GitHub as my platform of choice for code sharing and publication. I use Gitbash on the regular,
+    and I am very familiar with the console.`,
+  },
 ];
 
 const aboutCardsDisplayed = document.querySelector(".content");
