@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="About David Miles and the projects he's done with Practicum."
+    />
     <title>My Story</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="pages/index.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://code.s3.yandex.net/web-code/favicon.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body class="page">
     <header class="header">
@@ -71,6 +71,23 @@
         </p>
       </div>
     </section>
+    <section class="projects">
+      <div class="projects__overlay">
+        <h2 class="projects__heading">Projects with Practicum</h2>
+        <div class="projects__container">
+          <template id="card">
+            <div class="card">
+              <img class="card-image" />
+              <h2 class="card-title">
+                <a href="" target="blank" class="projects__link"></a>
+              </h2>
+              <p class="card-text"></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <script src="./scripts/script.js"></script>
     <footer class="footer">
       <p class="footer-author">Created by David Miles</p>
     </footer>

@@ -1,11 +1,16 @@
 .content {
   display: grid;
-  flex-wrap: wrap;
   justify-content: center;
   max-width: 790px;
-  margin: 100px auto 50px;
+  margin: 50px auto 50px;
   grid-template-columns: repeat(auto-fill, 350px);
-  grid-auto-rows: 450px;
+  grid-template-rows: repeat(auto-fill, 450px);
   row-gap: 40px;
   column-gap: 90px;
+}
+
+@media screen and (max-width: 800px) {
+  .content {
+    max-width: 350px;
+  }
 }
