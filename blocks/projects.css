@@ -28,9 +28,9 @@
 
 .projects__heading {
   font-family: "Permanent Marker", cursive;
-  font-size: 44px;
+  font-size: 70px;
   color: #fff;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .projects__link {
@@ -48,5 +48,8 @@
 
   .projects__container {
     max-width: 350px;
+  }
+  .projects__heading {
+    font-size: 46px;
   }
 }
