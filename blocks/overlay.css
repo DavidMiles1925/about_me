@@ -1,8 +1,20 @@
 .overlay {
   max-width: 100%;
-  min-height: 60vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 0 60px 60px;
+}
+
+.overlay_type_bright {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 800px) {
+  .overlay {
+    padding: 0;
+  }
 }

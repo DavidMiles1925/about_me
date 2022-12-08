@@ -1,9 +1,11 @@
 @import url(../vendor/normalize.css);
 @import url(../fonts/fonts.css);
 @import url(../blocks/page.css);
+@import url(../blocks/sections.css);
 @import url(../blocks/header.css);
 @import url(../blocks/overlay.css);
 @import url(../blocks/content.css);
 @import url(../blocks/card.css);
 @import url(../blocks/projects.css);
+@import url(../blocks/usefulFiles.css);
 @import url(../blocks/footer.css);

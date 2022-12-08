@@ -1,0 +1,24 @@
+.usefulFiles {
+  width: 100%;
+  background-image: url("../images/usefulFiles_background.jpg");
+  background-size: cover;
+}
+
+.usefulFiles__container {
+  display: grid;
+  justify-content: center;
+  max-width: 790px;
+  margin: 20px auto 50px;
+  grid-template-columns: repeat(auto-fill, 350px);
+  grid-template-rows: repeat(auto-fill, 450px);
+  row-gap: 40px;
+  column-gap: 90px;
+}
+
+.usefulFiles__link {
+  color: rgba(0, 132, 255, 1);
+}
+
+.usefulFiles__link:hover {
+  color: red;
+}

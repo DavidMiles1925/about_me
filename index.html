@@ -20,23 +20,44 @@
     <section class="content">
       <template id="aboutCard">
         <div class="card">
-          <img class="card-image" />
-          <h2 class="card-title"></h2>
-          <p class="card-text"></p>
+          <img class="card__image" />
+          <h2 class="card__title"></h2>
+          <p class="card__text"></p>
         </div>
       </template>
     </section>
     <section class="projects">
-      <div class="projects__overlay">
-        <h2 class="projects__heading">Projects with Practicum</h2>
-        <div class="projects__container">
+      <div class="overlay">
+        <h2 class="sections__heading">Projects with Practicum</h2>
+        <div class="sections__container">
           <template id="projectCard">
             <div class="card">
-              <img class="card-image" />
-              <h2 class="card-title">
+              <img class="card__image" />
+              <h2 class="card__title">
                 <a href="" target="blank" class="projects__link"></a>
               </h2>
-              <p class="card-text"></p>
+              <p class="card__text"></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <section class="usefulFiles">
+      <div class="overlay overlay_type_bright">
+        <h2 class="sections__heading">Useful Files I've Made</h2>
+        <div class="sections__container">
+          <template id="usefulCard">
+            <div class="card">
+              <img class="card__image" />
+              <h2 class="card__title">
+                <a
+                  href=""
+                  target="blank"
+                  class="usefulFiles__link"
+                  download
+                ></a>
+              </h2>
+              <p class="card__text"></p>
             </div>
           </template>
         </div>

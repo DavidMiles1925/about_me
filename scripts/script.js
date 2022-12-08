@@ -76,33 +76,48 @@ let projectCards = [
   },
 ];
 
+let usefulCards = [
+  {
+    title: "Work Wages for UPS",
+    link: "./downloads/Hours_Worked_New.xlms",
+    src: "./images/work_wage.png",
+    alt: "WorkWage",
+    text: `This file was created for myself and my team members to be able to quickly calculate our wages
+    for the week. UPS pays overtime after 5 hours of work in a day. They pay overtime for the 6th day of
+    the week worked, and double time for the 7th. Click the link to download the file.`,
+  },
+];
+
+const projectSelector = document.querySelector(".projects");
+const usefulSelector = document.querySelector(".usefulFiles");
+
 const aboutCardsDisplayed = document.querySelector(".content");
 const aboutCardTemplate = document.querySelector("#aboutCard").content;
 
-const projectCardsDisplayed = document.querySelector(".projects__container");
+const projectCardsDisplayed = projectSelector.querySelector(
+  ".sections__container"
+);
 const projectCardTemplate = document.querySelector("#projectCard").content;
+
+const usefulCardsDisplayed = usefulSelector.querySelector(
+  ".sections__container"
+);
+const usefulCardTemplate = document.querySelector("#usefulCard").content;
 
 function getAboutElement(data) {
   let aboutElement = aboutCardTemplate.querySelector(".card").cloneNode(true);
 
-  aboutElement.querySelector(".card-title").textContent = data["title"];
-  aboutElement.querySelector(".card-image").src = data["src"];
-  aboutElement.querySelector(".card-image").alt = data["alt"];
-  aboutElement.querySelector(".card-text").textContent = data["text"];
+  aboutElement.querySelector(".card__title").textContent = data["title"];
+  aboutElement.querySelector(".card__image").src = data["src"];
+  aboutElement.querySelector(".card__image").alt = data["alt"];
+  aboutElement.querySelector(".card__text").textContent = data["text"];
 
   return aboutElement;
 }
 
 function appendAboutCards() {
   for (card of aboutCards) {
-    let data = ["title", "src", "alt", "text"];
-
-    data["title"] = card.title;
-    data["src"] = card.src;
-    data["alt"] = card.alt;
-    data["text"] = card.text;
-
-    let newCard = getAboutElement(data);
+    let newCard = getAboutElement(card);
 
     aboutCardsDisplayed.append(newCard);
   }
@@ -113,28 +128,41 @@ function getProjectElement(data) {
 
   cardElement.querySelector(".projects__link").textContent = data["title"];
   cardElement.querySelector(".projects__link").href = data["link"];
-  cardElement.querySelector(".card-image").src = data["src"];
-  cardElement.querySelector(".card-image").alt = data["alt"];
-  cardElement.querySelector(".card-text").textContent = data["text"];
+  cardElement.querySelector(".card__image").src = data["src"];
+  cardElement.querySelector(".card__image").alt = data["alt"];
+  cardElement.querySelector(".card__text").textContent = data["text"];
 
   return cardElement;
 }
 
 function appendProjectCards() {
   for (card of projectCards) {
-    let data = ["title", "link", "src", "alt", "text"];
-
-    data["title"] = card.title;
-    data["link"] = card.link;
-    data["src"] = card.src;
-    data["alt"] = card.alt;
-    data["text"] = card.text;
-
-    let newCard = getProjectElement(data);
+    let newCard = getProjectElement(card);
 
     projectCardsDisplayed.append(newCard);
   }
 }
 
+function getUsefulElement(data) {
+  let usefulElement = usefulCardTemplate.querySelector(".card").cloneNode(true);
+
+  usefulElement.querySelector(".usefulFiles__link").textContent = data["title"];
+  usefulElement.querySelector(".usefulFiles__link").href = data["link"];
+  usefulElement.querySelector(".card__image").src = data["src"];
+  usefulElement.querySelector(".card__image").alt = data["alt"];
+  usefulElement.querySelector(".card__text").textContent = data["text"];
+
+  return usefulElement;
+}
+
+function appendUsefulCards() {
+  for (card of usefulCards) {
+    let newCard = getUsefulElement(card);
+
+    usefulCardsDisplayed.append(newCard);
+  }
+}
+
 appendAboutCards();
 appendProjectCards();
+appendUsefulCards();

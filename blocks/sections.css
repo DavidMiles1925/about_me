@@ -1,0 +1,26 @@
+.sections__container {
+  display: grid;
+  justify-content: center;
+  max-width: 790px;
+  margin: 20px auto 50px;
+  grid-template-columns: repeat(auto-fill, 350px);
+  grid-template-rows: repeat(auto-fill, 450px);
+  row-gap: 40px;
+  column-gap: 90px;
+}
+
+.sections__heading {
+  font-family: "Permanent Marker", cursive;
+  font-size: 70px;
+  color: #fff;
+  margin: 30px auto;
+}
+
+@media screen and (max-width: 800px) {
+  .sections__container {
+    max-width: 350px;
+  }
+  .sections__heading {
+    font-size: 46px;
+  }
+}
