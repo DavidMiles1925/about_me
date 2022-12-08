@@ -79,7 +79,7 @@ let projectCards = [
 let usefulCards = [
   {
     title: "Work Wages for UPS",
-    link: "./downloads/Hours_Worked_New.xlms",
+    link: "./downloads/Hours_Worked_New.xlsm",
     src: "./images/work_wage.png",
     alt: "WorkWage",
     text: `This file was created for myself and my team members to be able to quickly calculate our wages
