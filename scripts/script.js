@@ -88,23 +88,26 @@ let usefulCards = [
   },
 ];
 
+// Selectors
 const projectSelector = document.querySelector(".projects");
 const usefulSelector = document.querySelector(".usefulFiles");
 
-const aboutCardsDisplayed = document.querySelector(".content");
+// Templates
 const aboutCardTemplate = document.querySelector("#aboutCard").content;
+const projectCardTemplate = document.querySelector("#projectCard").content;
+const usefulCardTemplate = document.querySelector("#usefulCard").content;
 
+// Containers
+const aboutCardsDisplayed = document.querySelector(".content");
 const projectCardsDisplayed = projectSelector.querySelector(
   ".sections__container"
 );
-const projectCardTemplate = document.querySelector("#projectCard").content;
-
 const usefulCardsDisplayed = usefulSelector.querySelector(
   ".sections__container"
 );
-const usefulCardTemplate = document.querySelector("#usefulCard").content;
 
-function getAboutElement(data) {
+// getCard functions
+const getAbout = function getAboutElement(data) {
   let aboutElement = aboutCardTemplate.querySelector(".card").cloneNode(true);
 
   aboutElement.querySelector(".card__title").textContent = data["title"];
@@ -113,17 +116,9 @@ function getAboutElement(data) {
   aboutElement.querySelector(".card__text").textContent = data["text"];
 
   return aboutElement;
-}
+};
 
-function appendAboutCards() {
-  for (card of aboutCards) {
-    let newCard = getAboutElement(card);
-
-    aboutCardsDisplayed.append(newCard);
-  }
-}
-
-function getProjectElement(data) {
+const getProject = function getProjectElement(data) {
   let cardElement = projectCardTemplate.querySelector(".card").cloneNode(true);
 
   cardElement.querySelector(".projects__link").textContent = data["title"];
@@ -133,17 +128,9 @@ function getProjectElement(data) {
   cardElement.querySelector(".card__text").textContent = data["text"];
 
   return cardElement;
-}
+};
 
-function appendProjectCards() {
-  for (card of projectCards) {
-    let newCard = getProjectElement(card);
-
-    projectCardsDisplayed.append(newCard);
-  }
-}
-
-function getUsefulElement(data) {
+const getUseful = function getUsefulElement(data) {
   let usefulElement = usefulCardTemplate.querySelector(".card").cloneNode(true);
 
   usefulElement.querySelector(".usefulFiles__link").textContent = data["title"];
@@ -153,16 +140,18 @@ function getUsefulElement(data) {
   usefulElement.querySelector(".card__text").textContent = data["text"];
 
   return usefulElement;
-}
+};
 
-function appendUsefulCards() {
-  for (card of usefulCards) {
-    let newCard = getUsefulElement(card);
+// Append Cards
+function appendCards(cards, func, container) {
+  for (card of cards) {
+    let newCard = func(card);
 
-    usefulCardsDisplayed.append(newCard);
+    container.append(newCard);
   }
 }
 
-appendAboutCards();
-appendProjectCards();
-appendUsefulCards();
+// Script
+appendCards(aboutCards, getAbout, aboutCardsDisplayed);
+appendCards(projectCards, getProject, projectCardsDisplayed);
+appendCards(usefulCards, getUseful, usefulCardsDisplayed);
