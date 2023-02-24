@@ -39,16 +39,17 @@ const projectCards = [
     link: "https://davidmiles1925.github.io/se_project_react/",
     src: "./images/weather_app.png",
     alt: "GitHub",
-    text: `Check out my code repositories to see the magic happening behind the scenes. I use
-    GitHub as my platform of choice for code sharing and publication. I use Gitbash on the regular,
-    and I am very familiar with the console.`,
+    text: `This project was built with React.js as a template for a Weather app. It takes real-time
+    data from the OpenWeather API. Some of the elements highlighted in this project include a dynamic
+    weather bar that changes color and image depending on weather conditions, suggestion cards that
+    change depending on temperatur range, and use of a mock server for adding additional content via API.`,
   },
   {
     title: "Around the U.S.",
     link: "https://davidmiles1925.github.io/se_project_aroundtheus/",
     src: "./images/profile.png",
     alt: "Profile",
-    text: `My next project was implemented in several phases. The design was presented
+    text: `This project was implemented in several phases. The design was presented
     to me via Figma to simulate a real-world specification sheet. I was introduced
     to responsive web design using tools such as grid layout and media queries.
     This was also my first opportunity to work with JavaScript. My script included
@@ -59,7 +60,7 @@ const projectCards = [
     link: "https://davidmiles1925.github.io/se_project_library/",
     src: "./images/inside_the_library.png",
     alt: "Library",
-    text: `My first project was an introduction to HTML and CSS. I was tasked
+    text: `My very first project was an introduction to HTML and CSS. I was tasked
     with creating a website for a fictitious library called the
     "Practicum Library". This is where I practiced the basic building
     blocks of web development. Click the link to visit the page.`,
@@ -69,8 +70,7 @@ const projectCards = [
     link: "https://davidmiles1925.github.io/se_project_coffeeshop/",
     src: "./images/inside_coffee_shop.png",
     alt: "Coffee Shop",
-    text: `My second project expanded on my HTML and CSS skills. I created
-    a web page for a coffee shop called the "Practicum Coffee Shop". Some skills
+    text: `In this project,  I created a web page for a coffee shop called the "Practicum Coffee Shop". Some skills
     included were flat BEM, embedding media content, creating a form, and adding
     animations. Click the link to visit the page.`,
   },
